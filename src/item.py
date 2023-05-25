@@ -28,8 +28,9 @@ class Item:
 
         return sum_product
 
-    def apply_discount(self) -> None:
+    def apply_discount(self) -> float:
         """
         Применяет установленную скидку для конкретного товара.
         """
         self.price = self.price * self.pay_rate
+        return self.price

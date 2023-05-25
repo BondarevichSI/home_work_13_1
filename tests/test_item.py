@@ -5,12 +5,12 @@ from src.item import Item
 
 @pytest.fixture()
 def product():
-    return "f", 1000, 3
+    return Item("f", 1000, 3)
 
 
 def test_calculate_total_price(product):
-    assert Item.calculate_total_price(product) == 3000
+    assert product.calculate_total_price() == 3000.0
 
 
 def test_apply_discount(product):
-    assert Item.apply_discount(product) == 1000
+    assert product.apply_discount() == 1000
