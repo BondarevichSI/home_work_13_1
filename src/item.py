@@ -48,7 +48,6 @@ class Item:
         else:
             raise Exception('Длина наименования товара превышает 10 символов')
 
-
     @name.setter
     def name(self, data):
         self.__name = data

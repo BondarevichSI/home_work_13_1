@@ -29,3 +29,9 @@ def test_name_setter(product):
 def test_string_to_number(product):
     assert product.string_to_number('5') == 5
     assert product.string_to_number('5.5') == 5.5
+
+
+def test_instantiate_from_csv(product):
+    product.instantiate_from_csv()
+    assert len(product.all) == 6
+
