@@ -66,5 +66,5 @@ class Item:
     @staticmethod
     def string_to_number(num):
         if "." in num:
-            return float(num)
+            return int(float(num))
         return int(num)
