@@ -43,17 +43,18 @@ class Item:
 
     @property
     def name(self):
-        if len(self.__name) <= 10:
-            return self.__name
-        else:
-            raise Exception('Длина наименования товара превышает 10 символов')
+        return self.__name
 
     @name.setter
     def name(self, data):
-        self.__name = data
+        if len(data) <= 10:
+            self.__name = data
+        else:
+            raise Exception('Длина наименования товара превышает 10 символов')
 
     @classmethod
     def instantiate_from_csv(cls):
+        cls.all.clear()
         with open(PATH_TO_CVS_FILE, newline='') as csvfile:
             csv_data = csv.DictReader(csvfile)
             for row in csv_data:

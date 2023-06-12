@@ -33,5 +33,5 @@ def test_string_to_number(product):
 
 def test_instantiate_from_csv(product):
     product.instantiate_from_csv()
-    assert len(product.all) == 6
+    assert len(product.all) == 5
 
